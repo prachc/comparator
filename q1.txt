@@ -1,0 +1,20 @@
+1 rakuten tokyo engineer java web api
+2 rakuten tokyo engineer java web api python
+3 rakuten tokyo engineer data ruby python
+
+company location postion = clp
+other = desp
+
+map (key, value)
+
+key = hash(rakuten+tokyo+engineer) = 0x123
+value = set of hash = [0x1, 0x2, 0x3], [0x1, 0x2, 0x3, 0x4], [0x5, 0x6, 0x7] 
+
+first round
+- create index map (index, {md5(clp),md5(desp)})
+- find 100 top most pattern of clp = map(md5(clp),occurance) -- or using threshold -- O(n)
+- in each of 100 top clp, find top 100 desp = map(md5(desp),occurrance) -- or using threshold
+- now have 100x100 pattern of most occurance of clp x desp
+- start categorize the job from index 1 to all --> map(pattern,count)
+
+
