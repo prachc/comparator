@@ -23,3 +23,9 @@ http://jacksondunstan.com/articles/2527
 
 Super charging your HashMaps
 http://www.javaranch.com/journal/2008/08/supercharging-your-hashmaps.html
+
+Java collection big O
+http://javadevelopersenior.com/blog/wp-content/uploads/2013/05/java_collections.pdf
+
+Big o cheat sheet
+http://bigocheatsheet.com/
