@@ -17,4 +17,9 @@ first round
 - now have 100x100 pattern of most occurance of clp x desp
 - start categorize the job from index 1 to all --> map(pattern,count)
 
+Links:
+String vs Int key
+http://jacksondunstan.com/articles/2527
 
+Super charging your HashMaps
+http://www.javaranch.com/journal/2008/08/supercharging-your-hashmaps.html
