@@ -18,22 +18,41 @@ public class UniqueElem {
 		} 
 
 		System.out.println("unique element ="+ones+" \n"); 
-		
+
 		Integer[] a = {1,2,3,4,0,1,5,2,1};
-        HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
-        for(int x : a)
-        {
-            if (map.containsKey(x))  map.put(x,map.get(x)+1);
-            else map.put(x,1);
-        }
-        Integer [] keys = map.keySet().toArray(new Integer[map.size()]);
-        for(int x : keys)
-        {
-            if(map.get(x)!=1){
-                System.out.println(x+" repeats : "+map.get(x));
-            }else{
-            	System.out.println(x+" unique");
-            }
-        }
+		HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+		for(int x : a)
+		{
+			if (map.containsKey(x))  map.put(x,map.get(x)+1);
+			else map.put(x,1);
+		}
+		Integer [] keys = map.keySet().toArray(new Integer[map.size()]);
+		for(int x : keys)
+		{
+			if(map.get(x)!=1){
+				System.out.println(x+" repeats : "+map.get(x));
+			}else{
+				System.out.println(x+" unique");
+			}
+		}
+		int[] arr = {1,2,3,4,5,6,7,8,9};
+		System.out.println("binarySearch index "+binarySearch(arr,7));
+	}
+
+	public static int binarySearch(int[] arr, int v){
+		int low = 0;
+		int high = arr[arr.length-1];
+		while (low <= high) 
+		{
+			int mid = (low + high) / 2;
+			if (arr[mid] > v)
+				high = mid - 1;
+			else if (arr[mid] < v)
+				low = mid + 1;
+			else
+				return mid; // found
+		}
+		return -1;
+
 	}
 }
