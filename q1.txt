@@ -32,3 +32,21 @@ http://bigocheatsheet.com/
 
 Java memory optimization
 http://java-performance.info/overview-of-memory-saving-techniques-java/
+
+For LinkedList<E>
+
+get(int index) is O(n)
+add(E element) is O(1)
+add(int index, E element) is O(n)
+remove(int index) is O(n)
+Iterator.remove() is O(1) <--- main benefit of LinkedList<E>
+ListIterator.add(E element) is O(1) <--- main benefit of LinkedList<E>
+
+For ArrayList<E>
+
+get(int index) is O(1) <--- main benefit of ArrayList<E>
+add(E element) is O(1) amortized, but O(n) worst-case since the array must be resized and copied
+add(int index, E element) is O(n - index) amortized, but O(n) worst-case (as above)
+remove(int index) is O(n - index) (i.e. removing last is O(1))
+Iterator.remove() is O(n - index)
+ListIterator.add(E element) is O(n - index)
