@@ -1,4 +1,10 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 
 public class UniqueElem {
@@ -37,7 +43,19 @@ public class UniqueElem {
 		}
 		int[] arr = {1,2,3,4,5,6,7,8,9};
 		System.out.println("binarySearch index "+binarySearch(arr,7));
+		//randInts();
+		ArrayList<Integer> list = asList(arr);
+		Collections.shuffle(list);
+		System.out.println(list);
+		System.out.println(permutation("abcd"));
 	}
+	
+	public static ArrayList<Integer> asList(int[] array){
+		ArrayList<Integer> list = new ArrayList<Integer>(array.length);
+		for (int i = 0; i < array.length; i++)
+			list.add(Integer.valueOf(array[i]));
+		return list;
+    }
 
 	public static int binarySearch(int[] arr, int v){
 		int low = 0;
@@ -54,5 +72,47 @@ public class UniqueElem {
 		}
 		return -1;
 
+	}
+	
+	public static Set<Integer> pickRandom(int n, int k) {
+	    Random random = new Random(); // if this method is used often, perhaps define random at class level
+	    Set<Integer> picked = new HashSet<Integer>();
+	    while(picked.size() < n) {
+	        picked.add(random.nextInt(k + 1));
+	    }
+	    return picked;
+	}
+	
+	public static boolean checkPermutation(String str1,String str2){
+		if(str1.length() != str2.length())
+			return false;
+
+		char[] a = str1.toCharArray();
+		char[] b = str2.toCharArray();
+		Arrays.sort(a);
+		Arrays.sort(b);
+		int len = a.length;
+
+		for(int i = 0; i < len; i++)
+			if(b[i] != a[i])
+				return false;
+
+		return true;
+	}
+	
+	public static ArrayList<String> permutation(String str) { 
+		ArrayList<String> list = new ArrayList<String>();
+	    permutation("", str, list);
+	    return list;
+	}
+
+	private static void permutation(String prefix, String str, ArrayList<String> list) {
+	    int n = str.length();
+	    if (n == 0) 
+	    	list.add(prefix);
+	    else {
+	        for (int i = 0; i < n; i++)
+	            permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n),list);
+	    }
 	}
 }
