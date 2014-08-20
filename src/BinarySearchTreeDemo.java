@@ -149,7 +149,7 @@ class BinarySearchTree {
 }
 
 public class BinarySearchTreeDemo {
-
+	//http://lcm.csa.iisc.ernet.in/dsa/node84.html
   public static void main(String[] args) {
     BinarySearchTree bst = new BinarySearchTree();
     bst .insert(40)

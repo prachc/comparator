@@ -156,3 +156,6 @@ boolean isDelimeter(char c){
      //4 pop until the last [di-select] and choose another way. 
      //5 do until finding the end
  }
+ 
+ /// Pre In Post order
+ http://lcm.csa.iisc.ernet.in/dsa/node84.html
