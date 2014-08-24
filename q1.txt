@@ -157,5 +157,8 @@ boolean isDelimeter(char c){
      //5 do until finding the end
  }
  
- /// Pre In Post order
+/// Pre In Post order
  http://lcm.csa.iisc.ernet.in/dsa/node84.html
+
+// Linked list loop
+http://stackoverflow.com/questions/2663115/how-to-detect-a-loop-in-a-linked-list
