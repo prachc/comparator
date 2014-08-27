@@ -1,7 +1,7 @@
 import java.util.Queue;
 import java.util.Stack;
 
-public class DepthFirstSearch {
+public class DepthFirstSearch { 
 	// recursively traverse the tree with
 	// a stack of nodes (LIFO)
 	public static void depthFirstSearch(Stack stack) {

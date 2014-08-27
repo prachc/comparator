@@ -162,3 +162,6 @@ boolean isDelimeter(char c){
 
 // Linked list loop
 http://stackoverflow.com/questions/2663115/how-to-detect-a-loop-in-a-linked-list
+
+// Combination
+http://stackoverflow.com/posts/21720383/revisions
