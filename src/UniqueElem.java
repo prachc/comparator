@@ -47,7 +47,7 @@ public class UniqueElem {
 		ArrayList<Integer> list = asList(arr);
 		Collections.shuffle(list);
 		System.out.println(list);
-		System.out.println(permutation("abcd"));
+		
 	}
 	
 	public static ArrayList<Integer> asList(int[] array){
@@ -98,21 +98,5 @@ public class UniqueElem {
 				return false;
 
 		return true;
-	}
-	
-	public static ArrayList<String> permutation(String str) { 
-		ArrayList<String> list = new ArrayList<String>();
-	    permutation("", str, list);
-	    return list;
-	}
-
-	private static void permutation(String prefix, String str, ArrayList<String> list) {
-	    int n = str.length();
-	    if (n == 0) 
-	    	list.add(prefix);
-	    else {
-	        for (int i = 0; i < n; i++)
-	            permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n),list);
-	    }
 	}
 }
